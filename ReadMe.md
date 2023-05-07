@@ -15,6 +15,7 @@ The jar mainly acts as back end for the web interface, where as the django app p
  5. Tool Profile
  6. Reports
 
+### Module implementations
  #### Configuration Manager
  The user uploads a configuration file. It is stored in a particular location at the server. The path and file related informations are saved in the database. The user cann visualize and also update the contents of this files. This data is also used by other modules such as MASC Lab, MASC Engine, Tool profile. COnfigurations are the key to run MASC. So MASc web has introduced this interface using which users will be able to easily run any mutations according to their needs.
 
@@ -51,7 +52,21 @@ The user has to provide tool configuration in the configurations file. This runs
     }
 ```
 
-- Updated SIMILARITY Scope mutations with MAIN Scope mutations. That is replaced SSLContext and IvParameterContext mutations with MAIN scope mutations. The following is an example where the hard coded byte operator mutation was replaced with mutation from MAIN Scope.
+- Updated SIMILARITY Scope mutations with MAIN Scope mutations. That is replaced SSLContext,IvParameterContext, MessageDigest etc mutations with MAIN scope mutations. The following is an example where the hard coded byte operator mutation was replaced with mutation from MAIN Scope.
 
 ![example](assets/Capture.PNG)
+
+## Usage of the Web Interface
+User can easily go through different features with buttons clicks. MASC Lab has given them the chance to test their configurations and MASC Eninge can then fully utilize that configuration. The plugin integration is now more easyy as the user only needs to provide the java code and also can decide if it should be integrated or not. The results of the tool profiling process can now stored for further purapose. Beside the data from the MASC Engine process is also stored hence makaing the whole process more easy to maintain for the user.
+
+
+## Why this is a mature prototype?
+While desigining the prototype it was kept in mind that some process may take time so proper threading mechanism was used so that the user can keep using the features. Besides the installation process is simple and user no longer has to keeep track of all files. All design documentations were implemented prior to the development of the interface and also it has been kept in mind that new features may arise so has been implemented in a moduleriozed format. SOLID principles were maintained during the design and development process.
+
+ ## Limitations
+ Despite al the features the user still needs to provide a manually written configuration file and change it accordingly. As MASC is still evolving it is hard to bring all this configurations in a form format at this stage. 
+
+ But as there is always room for further development it can be implemented in future. And that is the future plan for the web interface.
+
+
 
